@@ -6,6 +6,6 @@ This is a small reactjs project that I'm building for the Microverse JS course. 
 
 - Create a barebones app using `create-react-app`
 - Delete unwanted files
-- Deploy it to heroku
+- Deploy it to heroku with buildpack
 
 ## You can contact me [here](shivamkaushikofficial@gmail.com)
