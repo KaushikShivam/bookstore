@@ -8,4 +8,6 @@ This is a small reactjs project that I'm building for the Microverse JS course. 
 - Delete unwanted files
 - Deploy it to heroku with buildpack
 
+## [Live version](https://micro-bookstore.herokuapp.com/)
+
 ## You can contact me [here](shivamkaushikofficial@gmail.com)
