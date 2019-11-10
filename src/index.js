@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import uuid from 'uuid/v4';
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -14,22 +15,22 @@ const middlewares = [logger];
 const STATE = {
   books: [
     {
-      id: 1,
+      id: uuid(),
       title: 'Book 1',
       category: 'Action',
     },
     {
-      id: 2,
+      id: uuid(),
       title: 'Book 2',
       category: 'Biography',
     },
     {
-      id: 3,
+      id: uuid(),
       title: 'Book 3',
       category: 'History',
     },
     {
-      id: 4,
+      id: uuid(),
       title: 'Book 4',
       category: 'Horror',
     },
