@@ -6,8 +6,9 @@ import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 
 class BooksList extends React.Component {
-  handleRemoveBook = book => {
-    this.props.removeBook(book);
+  handleRemoveBook = (book) => {
+    const { removeBook } = this.props;
+    removeBook(book);
   };
 
   render() {
@@ -23,7 +24,7 @@ class BooksList extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => (
+          {books.map((book) => (
             <Book key={book.id} book={book} removeBook={() => this.handleRemoveBook(book)} />
           ))}
         </tbody>
@@ -36,12 +37,13 @@ BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
+  removeBook: PropTypes.instanceOf(Function).isRequired,
 });
 
-const mapDispatchToProps = dispatch => ({
-  removeBook: book => dispatch(removeBook(book)),
+const mapDispatchToProps = (dispatch) => ({
+  removeBook: (book) => dispatch(removeBook(book)),
 });
 
 export default connect(

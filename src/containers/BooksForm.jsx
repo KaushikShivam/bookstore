@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import uuid from 'uuid/v4';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
-import uuid from 'uuid/v4';
+import PropTypes from 'prop-types';
 
 class BooksForm extends Component {
   constructor(props) {
@@ -16,10 +17,11 @@ class BooksForm extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     const book = { ...this.state, id: uuid() };
-    this.props.createBook(book);
+    const { createBook } = this.props;
+    createBook(book);
     this.setState({ title: '', category: '' });
   };
 
@@ -50,8 +52,12 @@ class BooksForm extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  createBook: book => dispatch(createBook(book)),
+BooksForm.propTypes = {
+  createBook: PropTypes.instanceOf(Function).isRequired,
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
 });
 
 export default connect(
