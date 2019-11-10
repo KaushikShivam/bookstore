@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createBook, removeBook } from '../actions/index';
+import uuid from 'uuid/v4';
 
 class BooksForm extends Component {
   constructor(props) {
@@ -13,8 +16,11 @@ class BooksForm extends Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = () => {
-    // Milestone 3 will handle this
+  handleSubmit = e => {
+    e.preventDefault();
+    const book = { ...this.state, id: uuid() };
+    this.props.createBook(book);
+    this.setState({ title: '', category: '' });
   };
 
   render() {
@@ -44,4 +50,11 @@ class BooksForm extends Component {
   }
 }
 
-export default BooksForm;
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(BooksForm);
