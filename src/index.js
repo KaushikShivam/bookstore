@@ -10,6 +10,7 @@ import './index.css';
 import App from './components/App';
 
 import rootReducer from './reducers/index';
+
 const middlewares = [logger];
 
 const STATE = {

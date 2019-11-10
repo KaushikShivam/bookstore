@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
 
 class BooksForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      category: '',
+    };
+  }
+
+  handleChange = ({ target }) => {
+    this.setState({ title: target.value });
+  };
+
+  handleSubmit = () => {
+    // Milestone 3 will handle this
+  };
+
+  handleSelect = ({ target }) => {
+    this.setState({ category: target.value });
+  };
+
   render() {
     const bookCategories = [
       'Action',
@@ -11,10 +31,11 @@ class BooksForm extends Component {
       'Learning',
       'Sci-Fi',
     ];
+    const { title, category } = this.state;
     return (
-      <form>
-        <input type="text" name="title" />
-        <select name="category">
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" name="title" value={title} onChange={this.handleChange} />
+        <select name="category" onChange={this.handleSelect} value={category}>
           {bookCategories.map((val, idx) => (
             <option key={idx} value={val}>
               {val}
