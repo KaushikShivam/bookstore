@@ -18,6 +18,11 @@ This is a small reactjs project that I'm building for the Microverse JS course. 
 - Implement Redux actions and reducers
 - Initialize Redux store
 
+## Milestone 3
+
+- Make `BooksForm` stateful to accommodate local input state
+- Add `ADD_BOOK` and `REMOVE_BOOK` actions to connect components to redux store
+
 ## [Live version](https://micro-bookstore.herokuapp.com/)
 
 ## You can contact me [here](shivamkaushikofficial@gmail.com)
