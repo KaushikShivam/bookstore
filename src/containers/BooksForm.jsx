@@ -9,16 +9,12 @@ class BooksForm extends Component {
     };
   }
 
-  handleChange = ({ target }) => {
-    this.setState({ title: target.value });
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
   };
 
   handleSubmit = () => {
     // Milestone 3 will handle this
-  };
-
-  handleSelect = ({ target }) => {
-    this.setState({ category: target.value });
   };
 
   render() {
@@ -35,7 +31,7 @@ class BooksForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="title" value={title} onChange={this.handleChange} />
-        <select name="category" onChange={this.handleSelect} value={category}>
+        <select name="category" onChange={this.handleChange} value={category}>
           {bookCategories.map((val, idx) => (
             <option key={idx} value={val}>
               {val}
