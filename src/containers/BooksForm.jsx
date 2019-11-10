@@ -16,7 +16,7 @@ class BooksForm extends Component {
         <input type="text" name="title" />
         <select name="category">
           {bookCategories.map((val, idx) => (
-            <option id={idx} value={val}>
+            <option key={idx} value={val}>
               {val}
             </option>
           ))}

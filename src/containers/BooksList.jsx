@@ -17,7 +17,7 @@ class BooksList extends Component {
         </thead>
         <tbody>
           {books.map(book => (
-            <Book id={book.id} book={book} />
+            <Book key={book.id} book={book} />
           ))}
         </tbody>
       </table>
