@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createBook, removeBook } from '../actions/index';
+import { createBook } from '../actions/index';
 import uuid from 'uuid/v4';
 
 class BooksForm extends Component {
