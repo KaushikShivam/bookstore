@@ -35,7 +35,7 @@ const STATE = {
       category: 'Horror',
     },
     {
-      id: 5,
+      id: uuid(),
       title: 'Book 5',
       category: 'Kids',
     },
