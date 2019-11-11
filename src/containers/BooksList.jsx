@@ -13,7 +13,8 @@ class BooksList extends React.Component {
   };
 
   handleFilterChange = filter => {
-    this.props.changeFilter(filter);
+    const { changeFilter } = this.props;
+    changeFilter(filter);
   };
 
   render() {
