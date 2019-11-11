@@ -22,7 +22,7 @@ const Book = ({ book: { title, category }, removeBook }) => (
       </div>
     </div>
     <div className="Book-content">
-      <img src={loader} alt="Loader image" />
+      <img src={loader} alt="Loader" />
       <div className="info">
         <p className="percent">65%</p>
         <p className="status">completed</p>
