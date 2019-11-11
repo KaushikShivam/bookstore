@@ -3,8 +3,7 @@ import uuid from 'uuid/v4';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
-
-const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import bookCategories from '../../utils';
 
 class BooksForm extends Component {
   constructor(props) {
