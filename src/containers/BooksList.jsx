@@ -27,7 +27,7 @@ class BooksList extends React.Component {
     return (
       <div className="BooksList">
         <CategoryFilter changeFilter={this.handleFilterChange} />
-        <tr>
+        <table>
           <thead>
             <tr>
               <th>Book ID</th>
@@ -41,7 +41,7 @@ class BooksList extends React.Component {
               <Book key={book.id} book={book} removeBook={() => this.handleRemoveBook(book)} />
             ))}
           </tbody>
-        </tr>
+        </table>
       </div>
     );
   }
