@@ -42,6 +42,8 @@ class CategoryFilter extends Component {
   }
 }
 
-CategoryFilter.propTypes = {};
+CategoryFilter.propTypes = {
+  changeFilter: PropTypes.instanceOf(Function).isRequired,
+};
 
 export default CategoryFilter;
