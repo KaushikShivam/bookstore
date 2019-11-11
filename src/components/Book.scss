@@ -1,10 +1,10 @@
 .Book {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 60%;
   background-color: white;
   border: solid 1px #e8e8e8;
   width: 100%;
-  padding: 3.2rem 2.7rem;
+  padding: 3.2rem 4rem;
   margin-bottom: 1.5rem;
 
   &-category {
@@ -23,4 +23,81 @@
     font-size: 1.4rem;
     margin-bottom: 3.1rem;
   }
+
+  &-ctc {
+    color: #4386bf;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding-right: 1.6rem;
+    margin-right: 1.6rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid #e8e8e8;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: darken($color: #4386bf, $amount: 10);
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 6.8rem;
+      height: 6.8rem;
+      margin-right: 2.5rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 9.2rem;
+      margin-right: 9.2rem;
+      border-right: solid 1px #e8e8e8;
+    }
+
+    .percent {
+      font-size: 3.2rem;
+      color: #121212;
+    }
+
+    .status {
+      font-size: 1.4rem;
+      color: rgba(18, 18, 18, 0.5);
+    }
+
+    .right-info {
+      margin-bottom: 3rem;
+    }
+
+    .current {
+      font-size: 1rem;
+      color: rgba(18, 18, 18, 0.5);
+      margin-bottom: 4px;
+    }
+
+    .chapter {
+      font-size: 1.6rem;
+      color: #121212;
+      font-weight: bold;
+    }
+
+    .progress {
+      padding: 7px 22px;
+      color: white;
+      background-color: #0290ff;
+      border-radius: 5px;
+    }
+
+  }
+
 }

@@ -21,6 +21,20 @@ const Book = ({ book: { title, category }, removeBook }) => (
         </button>
       </div>
     </div>
+    <div className="Book-content">
+      <img src={loader} alt="Loader image" />
+      <div className="info">
+        <p className="percent">65%</p>
+        <p className="status">completed</p>
+      </div>
+      <div>
+        <div className="right-info">
+          <p className="current">CURRENT CHAPTER</p>
+          <p className="chapter">CHAPTER 17</p>
+        </div>
+        <p className="progress">UPDATE PROGRESS</p>
+      </div>
+    </div>
   </div>
 );
 
