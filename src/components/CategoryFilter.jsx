@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class CategoryFilter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: 'All',
+    };
+  }
+
+  handleChangeFilter = ({ target }) => {
+    const { changeFilter } = this.props;
+    changeFilter(target.value);
+    this.setState({ filter: target.value });
+  };
+
   render() {
     const bookCategories = [
       'Action',
@@ -13,10 +26,11 @@ class CategoryFilter extends Component {
       'Sci-Fi',
     ];
     const mergedFilters = ['All', ...bookCategories];
+    const { value } = this.state;
     return (
       <div>
         Filter:
-        <select>
+        <select onChange={this.handleChangeFilter} value={value} name="filter">
           {mergedFilters.map((val, idx) => (
             <option key={idx} value={val}>
               {val}
