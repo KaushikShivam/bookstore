@@ -1,4 +1,4 @@
-# React Calculator
+# Bookstore CMS
 
 This is a small reactjs project that I'm building for the Microverse JS course. I shall be updating the README file as I progress through each milestone
 
