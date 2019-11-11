@@ -1,0 +1,24 @@
+.Book {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: white;
+  border: solid 1px #e8e8e8;
+  width: 100%;
+
+  &-category {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: rgba(18, 18, 18, 0.50);
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 2.2rem;
+  }
+
+  &-author {
+    color: #4386bf;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
