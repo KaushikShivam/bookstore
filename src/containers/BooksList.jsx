@@ -6,6 +6,9 @@ import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 import { removeBook, changeFilter } from '../actions/index';
 
+import './BooksList.scss';
+import user from '../assets/user.png';
+
 class BooksList extends React.Component {
   handleRemoveBook = book => {
     const { removeBook } = this.props;
@@ -27,22 +30,21 @@ class BooksList extends React.Component {
     }
     return (
       <div className="BooksList">
-        <CategoryFilter changeFilter={this.handleFilterChange} />
-        <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>category</th>
-              <th>Remove Book</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredBooks.map(book => (
-              <Book key={book.id} book={book} removeBook={() => this.handleRemoveBook(book)} />
-            ))}
-          </tbody>
-        </table>
+        <div className="Header">
+          <div className="Header-left">
+            <h2 className="Header-title">Bookstore CMS</h2>
+            <p className="Header-book">Books</p>
+            <CategoryFilter changeFilter={this.handleFilterChange} />
+          </div>
+          <div className="Header-right">
+            <img src={user} alt="User Logo" />
+          </div>
+        </div>
+        <div className="Books">
+          {filteredBooks.map(book => (
+            <Book key={book.id} book={book} removeBook={() => this.handleRemoveBook(book)} />
+          ))}
+        </div>
       </div>
     );
   }

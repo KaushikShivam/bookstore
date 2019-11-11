@@ -21,7 +21,6 @@ class CategoryFilter extends Component {
     const { filter } = this.state;
     return (
       <div>
-        Filter:
         <select onChange={this.handleChangeFilter} value={filter} name="filter">
           {mergedFilters.map((val, idx) => (
             <option key={idx} value={val}>
