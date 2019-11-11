@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import bookCategories from '../../utils';
+import bookCategories from '../utils';
 
 class CategoryFilter extends Component {
   constructor(props) {
