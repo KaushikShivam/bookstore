@@ -4,6 +4,8 @@
   background-color: white;
   border: solid 1px #e8e8e8;
   width: 100%;
+  padding: 3.2rem 2.7rem;
+  margin-bottom: 1.5rem;
 
   &-category {
     font-weight: bold;
@@ -19,6 +21,6 @@
   &-author {
     color: #4386bf;
     font-size: 1.4rem;
-    font-weight: bold;
+    margin-bottom: 3.1rem;
   }
 }
