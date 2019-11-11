@@ -26,6 +26,18 @@
       width: 4.5rem;
       height: 4.5rem;
     }
+
+    select {
+      border: none;
+      background-color: #ffffff;
+      font-size: 1.3rem;
+      color: #121212;
+      padding-left: 2rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   .Books {

@@ -20,15 +20,13 @@ class CategoryFilter extends Component {
     const mergedFilters = ['All', ...bookCategories];
     const { filter } = this.state;
     return (
-      <div>
-        <select onChange={this.handleChangeFilter} value={filter} name="filter">
-          {mergedFilters.map((val, idx) => (
-            <option key={idx} value={val}>
-              {val}
-            </option>
-          ))}
-        </select>
-      </div>
+      <select onChange={this.handleChangeFilter} value={filter} name="filter">
+        {mergedFilters.map((val, idx) => (
+          <option key={idx} value={val}>
+            {val}
+          </option>
+        ))}
+      </select>
     );
   }
 }
