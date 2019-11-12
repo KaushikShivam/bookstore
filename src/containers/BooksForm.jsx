@@ -1,41 +1,38 @@
 import React, { Component } from 'react';
+import uuid from 'uuid/v4';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../actions/index';
+
+const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: '',
-      category: '',
+      category: bookCategories[0],
     };
   }
 
-  handleChange = ({ target }) => {
-    this.setState({ title: target.value });
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
   };
 
-  handleSubmit = () => {
-    // Milestone 3 will handle this
-  };
-
-  handleSelect = ({ target }) => {
-    this.setState({ category: target.value });
+  handleSubmit = e => {
+    e.preventDefault();
+    const book = { ...this.state, id: uuid() };
+    const { createBook } = this.props;
+    createBook(book);
+    this.setState({ title: '', category: '' });
   };
 
   render() {
-    const bookCategories = [
-      'Action',
-      'Biography',
-      'History',
-      'Horror',
-      'Kids',
-      'Learning',
-      'Sci-Fi',
-    ];
     const { title, category } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="title" value={title} onChange={this.handleChange} />
-        <select name="category" onChange={this.handleSelect} value={category}>
+        <select name="category" onChange={this.handleChange} value={category}>
           {bookCategories.map((val, idx) => (
             <option key={idx} value={val}>
               {val}
@@ -48,4 +45,15 @@ class BooksForm extends Component {
   }
 }
 
-export default BooksForm;
+BooksForm.propTypes = {
+  createBook: PropTypes.instanceOf(Function).isRequired,
+};
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(BooksForm);
