@@ -23,6 +23,12 @@ This is a small reactjs project that I'm building for the Microverse JS course. 
 - Make `BooksForm` stateful to accommodate local input state
 - Add `ADD_BOOK` and `REMOVE_BOOK` actions to connect components to redux store
 
+## Milestone 4
+
+- Enhance redux store for `filter`
+- Implement `CategoryFilter` component
+- Update filter value in redux store
+
 ## [Live version](https://micro-bookstore.herokuapp.com/)
 
 ## You can contact me [here](shivamkaushikofficial@gmail.com)
