@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 import bookCategories from '../utils';
+import './BooksForm.scss';
 
 const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -31,17 +32,26 @@ class BooksForm extends Component {
   render() {
     const { title, category } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="title" value={title} onChange={this.handleChange} />
-        <select name="category" onChange={this.handleChange} value={category}>
-          {bookCategories.map((val, idx) => (
-            <option key={idx} value={val}>
-              {val}
-            </option>
-          ))}
-        </select>
-        <button type="submit">Submit</button>
-      </form>
+      <div className="BooksForm">
+        <h2 className="BooksForm-title">ADD NEW BOOK</h2>
+        <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="title"
+            value={title}
+            onChange={this.handleChange}
+            placeholder="Book Title"
+          />
+          <select name="category" onChange={this.handleChange} value={category}>
+            {bookCategories.map((val, idx) => (
+              <option key={idx} value={val}>
+                {val}
+              </option>
+            ))}
+          </select>
+          <button type="submit">Add Book</button>
+        </form>
+      </div>
     );
   }
 }

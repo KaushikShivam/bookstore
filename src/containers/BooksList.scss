@@ -1,0 +1,48 @@
+.BooksList {
+
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #0290ff;
+    }
+
+    &-book {
+      font-size: 1.3rem;
+      margin: 0 4.7rem;
+      color: #121212;
+    }
+
+    &-right img {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    select {
+      border: none;
+      background-color: #ffffff;
+      font-size: 1.3rem;
+      color: #121212;
+      padding-left: 2rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .Books {
+    padding: 3.8rem 10rem;
+    background-color: #fafafa;
+  }
+
+}

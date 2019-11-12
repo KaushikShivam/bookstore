@@ -1,4 +1,4 @@
-# React Calculator
+# Bookstore CMS
 
 This is a small reactjs project that I'm building for the Microverse JS course. I shall be updating the README file as I progress through each milestone
 
@@ -28,6 +28,15 @@ This is a small reactjs project that I'm building for the Microverse JS course. 
 - Enhance redux store for `filter`
 - Implement `CategoryFilter` component
 - Update filter value in redux store
+
+## Milestone 5
+
+- Replicate the UI to look like [this](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378)
+- The functionality only works for
+  - The filter on the top bar
+  - Remove button
+  - Add book form
+- Added all the items so that it looked the same as the reference link.
 
 ## [Live version](https://micro-bookstore.herokuapp.com/)
 

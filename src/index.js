@@ -17,28 +17,13 @@ const STATE = {
   books: [
     {
       id: uuid(),
-      title: 'Book 1',
+      title: 'The Hunger Games',
       category: 'Action',
     },
     {
       id: uuid(),
-      title: 'Book 2',
+      title: 'Capital in the twenty first century',
       category: 'Biography',
-    },
-    {
-      id: uuid(),
-      title: 'Book 3',
-      category: 'History',
-    },
-    {
-      id: uuid(),
-      title: 'Book 4',
-      category: 'Horror',
-    },
-    {
-      id: uuid(),
-      title: 'Book 5',
-      category: 'Kids',
     },
   ],
 };
