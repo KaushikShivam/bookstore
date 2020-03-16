@@ -6,14 +6,12 @@ import { createBook } from '../actions/index';
 import bookCategories from '../utils';
 import './BooksForm.scss';
 
-const bookCategories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
 class BooksForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: '',
-      category: bookCategories[0],
+      category: bookCategories[0]
     };
   }
 
@@ -57,14 +55,11 @@ class BooksForm extends Component {
 }
 
 BooksForm.propTypes = {
-  createBook: PropTypes.instanceOf(Function).isRequired,
+  createBook: PropTypes.instanceOf(Function).isRequired
 };
 
 const mapDispatchToProps = dispatch => ({
-  createBook: book => dispatch(createBook(book)),
+  createBook: book => dispatch(createBook(book))
 });
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(BooksForm);
+export default connect(null, mapDispatchToProps)(BooksForm);
