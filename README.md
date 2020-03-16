@@ -1,6 +1,6 @@
 # Bookstore CMS
 
-[Bookstore CMS](https://micro-bookstore.herokuapp.com/) Bookstore CMS let's your keep track of all the books that you own. It let's you add/remove/update the books. It is built using React and employs advanced state management technologies such as redux, routers etc. This is a project I built for the Microverse React course.
+[Bookstore CMS](https://bookstoreofficial.netlify.com/) Bookstore CMS let's your keep track of all the books that you own. It let's you add/remove/update the books. It is built using React and employs advanced state management technologies such as redux, routers etc. This is a project I built for the Microverse React course.
 
 ![Screenshot](screenshot.png)
 
