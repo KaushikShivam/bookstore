@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
